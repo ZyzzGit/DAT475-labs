@@ -96,7 +96,6 @@
     <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#planningOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#planningOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CoursePlanning"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance"/>
     </owl:ObjectProperty>
     
@@ -171,7 +170,7 @@
     <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assistantHours -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assistantHours">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CoursePlanning"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -266,7 +265,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#instanceID">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CoursePlanning"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -294,7 +292,7 @@
     <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#planningNumStudents -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#planningNumStudents">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CoursePlanning"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -320,7 +318,7 @@
     <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#seniorHours -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#seniorHours">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CoursePlanning"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -397,12 +395,6 @@
     <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance"/>
-    
-
-
-    <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CoursePlanning -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CoursePlanning"/>
     
 
 

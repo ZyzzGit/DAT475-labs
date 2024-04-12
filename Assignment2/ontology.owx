@@ -22,9 +22,6 @@
         <Class IRI="#CourseInstance"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CoursePlanning"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Programme"/>
     </Declaration>
     <Declaration>
@@ -204,10 +201,6 @@
         <Class IRI="#CourseInstance"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#planningOf"/>
-        <Class IRI="#CoursePlanning"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#programmeIn"/>
         <Class IRI="#Programme"/>
     </ObjectPropertyDomain>
@@ -297,7 +290,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#assistantHours"/>
-        <Class IRI="#CoursePlanning"/>
+        <Class IRI="#CourseInstance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#courseCode"/>
@@ -352,10 +345,6 @@
         <Class IRI="#CourseInstance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#instanceID"/>
-        <Class IRI="#CoursePlanning"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#level"/>
         <Class IRI="#Course"/>
     </DataPropertyDomain>
@@ -369,7 +358,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#planningNumStudents"/>
-        <Class IRI="#CoursePlanning"/>
+        <Class IRI="#CourseInstance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#programmeCode"/>
@@ -381,7 +370,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#seniorHours"/>
-        <Class IRI="#CoursePlanning"/>
+        <Class IRI="#CourseInstance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#status"/>
