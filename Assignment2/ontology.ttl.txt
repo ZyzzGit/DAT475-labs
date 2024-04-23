@@ -12,16 +12,18 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assignedTeacher
-:assignedTeacher rdf:type owl:ObjectProperty ;
-                 rdfs:domain :AssignedHour ;
-                 rdfs:range :Teacher .
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assignedOn
+:assignedOn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :TeacherAssignment ;
+            rdfs:range :CourseInstance .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assignedTo
 :assignedTo rdf:type owl:ObjectProperty ;
-            rdfs:domain :AssignedHour ;
-            rdfs:range :CourseInstance .
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :TeacherAssignment ;
+            rdfs:range :Teacher .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#courseIn
@@ -60,6 +62,22 @@
             rdfs:range :Course .
 
 
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ofDepartment
+:ofDepartment rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Programme ,
+                          :Teacher ;
+              rdfs:range :Department .
+
+
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ofDivision
+:ofDivision rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Course ,
+                        :Teacher ;
+            rdfs:range :Division .
+
+
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#planningOf
 :planningOf rdf:type owl:ObjectProperty ;
             rdfs:range :CourseInstance .
@@ -69,18 +87,6 @@
 :programmeIn rdf:type owl:ObjectProperty ;
              rdfs:domain :Programme ;
              rdfs:range :ProgrammeCourse .
-
-
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#reportedOn
-:reportedOn rdf:type owl:ObjectProperty ;
-            rdfs:domain :ReportedHour ;
-            rdfs:range :CourseInstance .
-
-
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#reportedTeacher
-:reportedTeacher rdf:type owl:ObjectProperty ;
-                 rdfs:domain :ReportedHour ;
-                 rdfs:range :Teacher .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#studentIn
@@ -104,6 +110,13 @@
               rdfs:domain :CourseInstance ,
                           :ProgrammeCourse ;
               rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assignedHours
+:assignedHours rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :TeacherAssignment ;
+               rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assistantHours
@@ -139,16 +152,15 @@
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#dept
 :dept rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
-      rdfs:domain :Programme ,
-                  :Teacher ;
+      rdfs:domain :Department ;
       rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#division
-:division rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Course ,
-                      :Teacher ;
-          rdfs:range xsd:string .
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#div
+:div rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty ;
+     rdfs:domain :Division ;
+     rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#grade
@@ -161,13 +173,6 @@
 :graduated rdf:type owl:DatatypeProperty ;
            rdfs:domain :Student ;
            rdfs:range xsd:boolean .
-
-
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#hours
-:hours rdf:type owl:DatatypeProperty ;
-       rdfs:domain :AssignedHour ,
-                   :ReportedHour ;
-       rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#instanceID
@@ -204,6 +209,13 @@
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#programmeName
 :programmeName rdf:type owl:DatatypeProperty ;
                rdfs:domain :Programme .
+
+
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#reportedHours
+:reportedHours rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :TeacherAssignment ;
+               rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#seniorHours
@@ -246,16 +258,20 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#AssignedHour
-:AssignedHour rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Course
 :Course rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseInstance
 :CourseInstance rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Department
+:Department rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Division
+:Division rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Programme
@@ -270,10 +286,6 @@
 :Registration rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ReportedHour
-:ReportedHour rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#SeniorTeacher
 :SeniorTeacher rdf:type owl:Class ;
                rdfs:subClassOf :Teacher .
@@ -285,6 +297,10 @@
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Teacher
 :Teacher rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#TeacherAssignment
+:TeacherAssignment rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#TeachingAssistant
