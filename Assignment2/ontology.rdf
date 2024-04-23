@@ -86,6 +86,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#inProgramme -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#inProgramme">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Programme"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#instanceOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#instanceOf">
@@ -129,15 +138,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#programmeIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Programme"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ProgrammeCourse"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#studentIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#studentIn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Student"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ProgrammeCourse"/>
     </owl:ObjectProperty>
     
@@ -460,15 +460,6 @@
     <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#TeacherAssignment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#TeacherAssignment"/>
-    
-
-
-    <!-- http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#TeachingAssistant -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#TeachingAssistant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Student"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#Teacher"/>
-    </owl:Class>
 </rdf:RDF>
 
 
