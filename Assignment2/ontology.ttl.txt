@@ -28,14 +28,14 @@
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseIn
 :CourseIn rdf:type owl:ObjectProperty ;
-          rdfs:domain :Course ;
-          rdfs:range :ProgrammeCourse .
+          rdfs:domain :ProgrammeCourse ;
+          rdfs:range :Course .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseRegistered
 :CourseRegistered rdf:type owl:ObjectProperty ;
-                  rdfs:domain :CourseInstance ;
-                  rdfs:range :Registration .
+                  rdfs:domain :Registration ;
+                  rdfs:range :Course .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#HasDirector
@@ -84,21 +84,16 @@
             rdfs:range :Division .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#PlanningOf
-:PlanningOf rdf:type owl:ObjectProperty ;
-            rdfs:range :CourseInstance .
-
-
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ProgrammeIn
 :ProgrammeIn rdf:type owl:ObjectProperty ;
-             rdfs:domain :Programme ;
-             rdfs:range :ProgrammeCourse .
+             rdfs:domain :ProgrammeCourse ;
+             rdfs:range :Programme .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#StudentRegistered
 :StudentRegistered rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Student ;
-                   rdfs:range :Registration .
+                   rdfs:domain :Registration ;
+                   rdfs:range :Student .
 
 
 #################################################################
@@ -116,13 +111,13 @@
 :assignedHours rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :TeacherAssignment ;
-               rdfs:range xsd:int .
+               rdfs:range xsd:float .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assistantHours
 :assistantHours rdf:type owl:DatatypeProperty ;
                 rdfs:domain :CourseInstance ;
-                rdfs:range xsd:int .
+                rdfs:range xsd:float .
 
 
 ###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#courseCode
@@ -252,6 +247,13 @@
 :teacherID rdf:type owl:DatatypeProperty ;
            rdfs:domain :Teacher ;
            rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#year
+:year rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Student ;
+      rdfs:range xsd:int .
 
 
 #################################################################
