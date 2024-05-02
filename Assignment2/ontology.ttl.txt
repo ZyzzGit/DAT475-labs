@@ -12,91 +12,91 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assignedOn
-:assignedOn rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#AssignedOn
+:AssignedOn rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :TeacherAssignment ;
             rdfs:range :CourseInstance .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#assignedTo
-:assignedTo rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#AssignedTo
+:AssignedTo rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :TeacherAssignment ;
             rdfs:range :Teacher .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#courseIn
-:courseIn rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseIn
+:CourseIn rdf:type owl:ObjectProperty ;
           rdfs:domain :Course ;
           rdfs:range :ProgrammeCourse .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#courseRegistered
-:courseRegistered rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#CourseRegistered
+:CourseRegistered rdf:type owl:ObjectProperty ;
                   rdfs:domain :CourseInstance ;
                   rdfs:range :Registration .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#hasDirector
-:hasDirector rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#HasDirector
+:HasDirector rdf:type owl:ObjectProperty ;
              rdfs:domain :Programme ;
              rdfs:range :SeniorTeacher .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#hasExaminer
-:hasExaminer rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#HasExaminer
+:HasExaminer rdf:type owl:ObjectProperty ;
              rdfs:domain :CourseInstance ;
              rdfs:range :SeniorTeacher .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#hasOwner
-:hasOwner rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#HasOwner
+:HasOwner rdf:type owl:ObjectProperty ;
           rdfs:domain :Course ;
           rdfs:range :Programme .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#inProgramme
-:inProgramme rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#InProgramme
+:InProgramme rdf:type owl:ObjectProperty ;
              rdfs:domain :Student ;
              rdfs:range :Programme .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#instanceOf
-:instanceOf rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#InstanceOf
+:InstanceOf rdf:type owl:ObjectProperty ;
             rdfs:domain :CourseInstance ;
             rdfs:range :Course .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ofDepartment
-:ofDepartment rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#OfDepartment
+:OfDepartment rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain :Programme ,
-                          :Teacher ;
+              rdfs:domain :Division ,
+                          :Programme ;
               rdfs:range :Department .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ofDivision
-:ofDivision rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#OfDivision
+:OfDivision rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :Course ,
                         :Teacher ;
             rdfs:range :Division .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#planningOf
-:planningOf rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#PlanningOf
+:PlanningOf rdf:type owl:ObjectProperty ;
             rdfs:range :CourseInstance .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#programmeIn
-:programmeIn rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#ProgrammeIn
+:ProgrammeIn rdf:type owl:ObjectProperty ;
              rdfs:domain :Programme ;
              rdfs:range :ProgrammeCourse .
 
 
-###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#studentRegistered
-:studentRegistered rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/aapohaavisto/ontologies/2024/3/untitled-ontology-2#StudentRegistered
+:StudentRegistered rdf:type owl:ObjectProperty ;
                    rdfs:domain :Student ;
                    rdfs:range :Registration .
 
